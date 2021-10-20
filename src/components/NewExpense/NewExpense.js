@@ -2,10 +2,10 @@ import React from 'react';
 import './NewExpense.css';
 import ExpenseForm from '../ExpenseForm/ExpenseForm'
 
-const NewExpense = () => {
+const NewExpense = (props) => {
   const submitFormHandler= (formData) =>{
     alert('New Expances')
-    return formData;
+    props.submitFormHandler(formData);
   }
   return (
           <div className="new-expense">
