@@ -4,6 +4,7 @@ import ExpenseForm from '../ExpenseForm/ExpenseForm'
 
 const NewExpense = () => {
   const submitFormHandler= (formData) =>{
+    alert('New Expances')
     return formData;
   }
   return (

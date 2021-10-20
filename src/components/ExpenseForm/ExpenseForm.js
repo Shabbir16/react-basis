@@ -2,7 +2,7 @@ import React from 'react';
 import './ExpenseForm.css';
 import {useState} from 'react';
 
-const ExpenseForm = ()=>{
+const ExpenseForm = (props)=>{
   const [title,setTitle] = useState('Shabbir');
   const [amount,setAmount] = useState('1.11');
   const [date,setDate] = useState('2020-11-12');
@@ -25,8 +25,8 @@ const ExpenseForm = ()=>{
       date:new Date(date),
       amount:amount
     }
-    console.log(formData);
-    return formData;
+    props.submitFormHandler(formData);
+    //  formData;
   }
 
   return (
