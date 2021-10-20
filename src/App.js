@@ -10,6 +10,12 @@ export default function App() {
       date: new Date(2021, 11, 21),
       amount: 229.99,
     },
+    {
+      id: 2,
+      title: 'New TV',
+      date: new Date(2020, 10, 21),
+      amount: 99.99,
+    },
   ];
 
   let arr = [];
