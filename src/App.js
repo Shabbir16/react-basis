@@ -17,6 +17,12 @@ export default function App() {
       date: new Date(2020, 10, 11),
       amount: 99.99,
     },
+    {
+      id: 3,
+      title: 'Real Me tab',
+      date: new Date(2021, 9, 7),
+      amount: 199,
+    },
   ];
 
   
@@ -25,7 +31,7 @@ export default function App() {
     <div>
       <h1>Hello StacsdfkBlitz!!</h1>
       <Expense data={expenseArr} 
-      soot="dadsad"/>
+      />
     </div>
   );
 }
