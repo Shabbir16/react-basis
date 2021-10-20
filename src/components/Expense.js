@@ -2,6 +2,7 @@ import React from 'react';
 import ExpenseItems  from './ExpenseItems';
 import Cards from './Cards';
 import './Expances.css';
+import NewExpense  from './NewExpense/NewExpense';
 
 function Expense(props){
   let expenseArr = props.data;
@@ -18,8 +19,11 @@ function Expense(props){
     }
 
     return (
+      <Cards>
+        <NewExpense/>
       <Cards className="expense">
        {arr}
+      </Cards>
       </Cards>
     )
 }
