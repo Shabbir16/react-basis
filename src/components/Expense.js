@@ -12,6 +12,7 @@ function Expense(props){
           title={expenseArr[i].title}
           date={expenseArr[i].date}
           amount={expenseArr[i].amount}
+          key={i}
         />
       );
     }
