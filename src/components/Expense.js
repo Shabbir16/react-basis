@@ -1,5 +1,7 @@
 import React from 'react';
 import ExpenseItems  from './ExpenseItems';
+import Cards from './Cards';
+import './Expances.css';
 
 function Expense(props){
   let expenseArr = props.data;
@@ -15,9 +17,9 @@ function Expense(props){
     }
 
     return (
-      <div>
+      <Cards className="expense">
        {arr}
-      </div>
+      </Cards>
     )
 }
 // class Expense extends React.Component{
