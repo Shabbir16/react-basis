@@ -6,7 +6,11 @@ import './ExpenseDate.css';
 class ExpenseDate extends React.Component{
 
   render(){
-    let date  = this.props.date;
+    let date  = new Date(); 
+    if(this.props.date){
+      this.props.date  = this.props.date;
+    }
+    
     let year = date.getFullYear();
     let month = date.toLocaleString('en-US',{month:'long'});
     let day = date.toLocaleString('en-US',{day:'2-digit'});

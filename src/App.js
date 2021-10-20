@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.css';
 import ExpenseItems from './components/ExpenseItems';
+import Expense from './components/ExpenseItems';
 
 export default function App() {
   let expenseArr = [
@@ -13,26 +14,18 @@ export default function App() {
     {
       id: 2,
       title: 'New TV',
-      date: new Date(2020, 10, 21),
+      date: new Date(2020, 10, 11),
       amount: 99.99,
     },
   ];
 
-  let arr = [];
-  for (let i = 0; i < expenseArr.length; i++) {
-    arr.push(
-      <ExpenseItems
-        title={expenseArr[i].title}
-        date={expenseArr[i].date}
-        amount={expenseArr[i].amount}
-      />
-    );
-  }
+  
 
   return (
     <div>
       <h1>Hello StacsdfkBlitz!</h1>
-      {arr}
+      <Expense data={expenseArr} 
+      soot="dadsad"/>
     </div>
   );
 }
