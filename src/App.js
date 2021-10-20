@@ -2,9 +2,10 @@ import React from 'react';
 import './style.css';
 import ExpenseItems from './components/ExpenseItems';
 import Expense from './components/Expense';
+import {useState} from 'react';
 
 export default function App() {
-  let expenseArr = [
+  let iniexpenseArr = [
     {
       id: 1,
       title: 'Cars Insaurance',
@@ -25,11 +26,17 @@ export default function App() {
     },
   ];
   const submitFormHandler= (formData) =>{
-    expenseArr.push({
-      ...formData,
-      id:expenseArr.length
+    // alert(formData.title);
+    setExpenseArr(prev=>{
+      return expenseArr.push({
+        ...formData,
+        id:expenseArr.length
+      })
     })
+    
   }
+
+  const [expenseArr,setExpenseArr] = useState(iniexpenseArr);
   
 
   return (

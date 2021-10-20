@@ -4,7 +4,7 @@ import ExpenseForm from '../ExpenseForm/ExpenseForm'
 
 const NewExpense = (props) => {
   const submitFormHandler= (formData) =>{
-    alert('New Expances')
+    // alert('New Expances')
     props.submitFormHandler(formData);
   }
   return (

@@ -6,6 +6,7 @@ import NewExpense  from './NewExpense/NewExpense';
 
 function Expense(props){
   const submitFormHandler= (formData) =>{
+    // alert('Expence')
     props.submitFormHandler(formData);
   }
   let expenseArr = props.data;
