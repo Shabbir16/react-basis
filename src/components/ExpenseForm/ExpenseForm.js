@@ -26,6 +26,7 @@ const ExpenseForm = ()=>{
       amount:amount
     }
     console.log(formData);
+    return formData;
   }
 
   return (

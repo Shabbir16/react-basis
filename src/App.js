@@ -24,14 +24,19 @@ export default function App() {
       amount: 199,
     },
   ];
-
+  const submitFormHandler= (formData) =>{
+    expenseArr.push({
+      ...formData,
+      id:expenseArr.length
+    })
+  }
   
 
   return (
     <div>
       <h1>Hello StacsdfkBlitz!!</h1>
       <Expense data={expenseArr} 
-      />
+      submitFormHandler={submitFormHandler}/>
     </div>
   );
 }

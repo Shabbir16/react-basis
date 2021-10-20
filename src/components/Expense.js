@@ -5,6 +5,9 @@ import './Expances.css';
 import NewExpense  from './NewExpense/NewExpense';
 
 function Expense(props){
+  const submitFormHandler= (formData) =>{
+    return formData;
+  }
   let expenseArr = props.data;
     let arr = [];
     for (let i = 0; i < expenseArr.length; i++) {
@@ -20,7 +23,7 @@ function Expense(props){
 
     return (
       <Cards>
-        <NewExpense/>
+        <NewExpense submitFormHandler={submitFormHandler}/>
       <Cards className="expense">
        {arr}
       </Cards>

@@ -3,9 +3,13 @@ import './NewExpense.css';
 import ExpenseForm from '../ExpenseForm/ExpenseForm'
 
 const NewExpense = () => {
+  const submitFormHandler= (formData) =>{
+    return formData;
+  }
   return (
           <div className="new-expense">
-            <ExpenseForm/>
+            <ExpenseForm
+            submitFormHandler={submitFormHandler}/>
           </div>
   )
 };
