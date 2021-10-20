@@ -8,7 +8,7 @@ class ExpenseDate extends React.Component{
   render(){
     let date  = new Date(); 
     if(this.props.date){
-      this.props.date  = this.props.date;
+      date  = this.props.date;
     }
     
     let year = date.getFullYear();

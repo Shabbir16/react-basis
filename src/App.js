@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 import ExpenseItems from './components/ExpenseItems';
-import Expense from './components/ExpenseItems';
+import Expense from './components/Expense';
 
 export default function App() {
   let expenseArr = [
@@ -23,7 +23,7 @@ export default function App() {
 
   return (
     <div>
-      <h1>Hello StacsdfkBlitz!</h1>
+      <h1>Hello StacsdfkBlitz!!</h1>
       <Expense data={expenseArr} 
       soot="dadsad"/>
     </div>

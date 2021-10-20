@@ -1,8 +1,8 @@
 import React from 'react';
+import ExpenseItems  from './ExpenseItems';
 
 function Expense(props){
   let expenseArr = props.data;
-    alert(props.soot)
     let arr = [];
     for (let i = 0; i < expenseArr.length; i++) {
       arr.push(
@@ -16,7 +16,7 @@ function Expense(props){
 
     return (
       <div>
-       sdf {arr}
+       {arr}
       </div>
     )
 }
