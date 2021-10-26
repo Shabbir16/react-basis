@@ -28,10 +28,11 @@ export default function App() {
   const submitFormHandler= (formData) =>{
     // alert(formData.title);
     setExpenseArr(prev=>{
-      return expenseArr.push({
+      return [...expenseArr,{
         ...formData,
         id:expenseArr.length
-      })
+      }]
+      
     })
     
   }
