@@ -1,9 +1,15 @@
 import React from 'react';
+import {useState} from 'react';
 
 import './ExpenseFilter.css';
 
 const ExpenseFilter = () => {
 
+  const [dateFilter,dateFilterHandler] = useState('2019');
+ const onDateClickHandler =(event)=>{
+    console.log(event.target.value);
+    props.onDateClickHandler(event.target.value);
+  }
 
   return (
     <div className='expenses-filter'>

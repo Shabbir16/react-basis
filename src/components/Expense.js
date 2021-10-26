@@ -3,6 +3,7 @@ import ExpenseItems  from './ExpenseItems';
 import Cards from './Cards';
 import './Expances.css';
 import NewExpense  from './NewExpense/NewExpense';
+import ExpenseFilter from './ExpenseFilter/ExpenseFilter'
 
 function Expense(props){
   const submitFormHandler= (formData) =>{
@@ -25,6 +26,9 @@ function Expense(props){
     return (
       <Cards>
         <NewExpense submitFormHandler={submitFormHandler}/>
+        <div>
+        <ExpenseFilter/>
+        </div>
       <Cards className="expense">
        {arr}
       </Cards>

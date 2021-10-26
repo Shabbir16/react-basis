@@ -16,7 +16,6 @@ function ExpenseItems(props){
 
   return (
     <div>
-      <ExpenseFilter/>
     <Cards className="expense-item">
       <div >
         <ExpenseDate
