@@ -4,6 +4,7 @@ import './ExpenseItems.css';
 import ExpenseDate from './ExpenseDate';
 import Cards from './Cards';
 import {useState} from 'react'
+import ExpenseFilter from './ExpenseFilter/ExpenseFilter'
 
 function ExpenseItems(props){
 
@@ -14,6 +15,8 @@ function ExpenseItems(props){
   }
 
   return (
+    <div>
+      <ExpenseFilter/>
     <Cards className="expense-item">
       <div >
         <ExpenseDate
@@ -26,6 +29,7 @@ function ExpenseItems(props){
       </div>
       <button onClick={clickHandler}>Click me</button>
     </Cards>
+    </div>
   );
 }
 
