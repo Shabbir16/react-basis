@@ -3,19 +3,25 @@ import {useState} from 'react';
 
 import './ExpenseFilter.css';
 
-const ExpenseFilter = () => {
+const ExpenseFilter = (props) => {
 
   const [dateFilter,dateFilterHandler] = useState('2019');
  const onDateClickHandler =(event)=>{
-    console.log(event.target.value);
-    props.onDateClickHandler(event.target.value);
+    let cur = event.target.value;
+    
+    dateFilterHandler((prevValue)=>{
+      console.log(prevValue);
+      console.log(cur);
+      props.onDateClickHandler(currentValue);
+
+    })
   }
 
   return (
     <div className='expenses-filter'>
       <div className='expenses-filter__control'>
         <label>Filter by year</label>
-        <select>
+        <select value={dateFilter} onChange={onDateClickHandler}>
           <option value='2022'>2022</option>
           <option value='2021'>2021</option>
           <option value='2020'>2020</option>

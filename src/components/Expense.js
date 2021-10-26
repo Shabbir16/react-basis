@@ -10,6 +10,9 @@ function Expense(props){
     // alert('Expence')
     props.submitFormHandler(formData);
   }
+  const onDateClickHandler = (data)=>{
+    console.log('From Expemse');
+  }
   let expenseArr = props.data;
     let arr = [];
     for (let i = 0; i < expenseArr.length; i++) {
@@ -27,7 +30,7 @@ function Expense(props){
       <Cards>
         <NewExpense submitFormHandler={submitFormHandler}/>
         <div>
-        <ExpenseFilter/>
+        <ExpenseFilter onDateClickHandler={onDateClickHandler}/>
         </div>
       <Cards className="expense">
        {arr}
