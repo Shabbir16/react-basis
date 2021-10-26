@@ -11,7 +11,8 @@ function Expense(props){
     props.submitFormHandler(formData);
   }
   const onDateClickHandler = (data)=>{
-    console.log('From Expemse');
+    console.log(data);
+    props.onDateClickHandler(data);
   }
   let expenseArr = props.data;
     let arr = [];

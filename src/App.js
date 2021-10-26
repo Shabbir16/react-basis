@@ -38,13 +38,26 @@ export default function App() {
   }
 
   const [expenseArr,setExpenseArr] = useState(iniexpenseArr);
+  const onDateClickHandler = (data)=>{//
+    setExpenseArr(prev=>{
+      let arr = expenseArr.filter((x)=>{
+        let fullYear = x.date.getFullYear();
+        if(fullYear == data){
+          return x;
+        }
+      })
+      return arr;
+      
+    })
+  }
   
 
   return (
     <div>
       <h1>Hello StacsdfkBlitz!!</h1>
       <Expense data={expenseArr} 
-      submitFormHandler={submitFormHandler}/>
+      submitFormHandler={submitFormHandler}
+      onDateClickHandler={onDateClickHandler}/>
     </div>
   );
 }
